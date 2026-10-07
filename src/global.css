@@ -16,4 +16,51 @@ button.secondary { background:#e1eeee; color:#18565a; }
 button.danger { background:#c2413b; }
 input, select, textarea { width:100%; border:1px solid #bdd3d2; border-radius:9px; padding:8px 10px; background:white; }
 .low-latency .decorative { display:none; }
+
+/* 大屏预览：只绑定正在发言的段 */
+.screen { background:#0d2b2e; color:#eaf7f5; border-radius:16px; padding:18px 22px; margin-bottom:18px; box-shadow:0 12px 28px rgba(13,43,46,.25); }
+.screen-head { display:flex; align-items:center; gap:14px; }
+.screen-head h2 { margin:0; font-size:clamp(18px,2.4vw,26px); letter-spacing:-.02em; }
+.screen-captions { margin-top:12px; display:grid; gap:8px; }
+.screen-line { display:grid; grid-template-columns:80px 1fr; gap:12px; align-items:baseline; padding:8px 0; border-top:1px solid rgba(255,255,255,.12); }
+.screen-line b { color:#7fd6cd; }
+.screen-line small { color:#9fc4c0; margin-left:8px; }
+.dim { color:#8fb3af; }
+
+/* 归属译员快照 */
+.chips { display:flex; gap:6px; flex-wrap:wrap; margin-top:6px; }
+.chip { font-size:12px; background:#d8efe9; color:#0b5a54; border-radius:999px; padding:2px 8px; }
+
+/* 提交结果 */
+.notice { margin-top:10px; border-radius:10px; padding:10px 12px; font-size:14px; }
+.notice.ok { background:#e3f6ec; color:#136f43; }
+.notice.conflict { background:#fdeceb; color:#a02c26; }
+.notice.rejected { background:#f2f4f5; color:#5a6b70; }
+
+/* 字幕版本 */
+.caption-row { margin-top:10px; padding:10px; background:#f1f8f7; border-radius:10px; }
+.caption-row p { margin:6px 0; }
+.caption-row small { color:#638087; }
+.caption-row.invalidated { opacity:.55; }
+.caption-row.invalidated p { text-decoration:line-through; }
+.pill.state-pending { background:#fdf3d8; color:#8a6a12; }
+.pill.state-confirmed { background:#e3f6ec; color:#136f43; }
+.pill.state-invalidated { background:#eef1f2; color:#7a8a8f; }
+
+/* 交接待确认 */
+.handoff-pending { display:flex; justify-content:space-between; align-items:center; gap:10px; background:#fdf3d8; border-radius:10px; padding:8px 10px; font-size:13px; color:#6d5410; }
+
+/* 重算任务 */
+.recalc-row { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid #e6efee; }
+.recalc-row small { display:block; color:#a02c26; }
+
+/* 时间账 */
+.ledger-row { display:grid; grid-template-columns:150px 76px 1fr; gap:10px; align-items:baseline; padding:9px 0; border-bottom:1px solid #e6efee; }
+.ledger-row small { color:#7a8a8f; font-variant-numeric:tabular-nums; }
+.kind { font-size:11px; border-radius:999px; padding:2px 8px; background:#e2f3f1; color:#086764; text-align:center; white-space:nowrap; }
+.kind-caption-conflict, .kind-recalc-failed { background:#fdeceb; color:#a02c26; }
+.kind-caption-invalidated, .kind-segment-end { background:#fdf3d8; color:#8a6a12; }
+.kind-caption-accepted, .kind-caption-confirmed, .kind-recalc-success, .kind-handoff-confirm { background:#e3f6ec; color:#136f43; }
+.kind-low-latency { background:#e8e9fb; color:#3d3f8f; }
+
 @media(max-width:900px){ .grid{grid-template-columns:1fr}.queue-row{grid-template-columns:36px 1fr}.queue-row>*:nth-child(n+3){display:none}.hero{align-items:flex-start;flex-direction:column} }
