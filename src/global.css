@@ -16,4 +16,12 @@ button.secondary { background:#e1eeee; color:#18565a; }
 button.danger { background:#c2413b; }
 input, select, textarea { width:100%; border:1px solid #bdd3d2; border-radius:9px; padding:8px 10px; background:white; }
 .low-latency .decorative { display:none; }
+.conflict-panel { margin-top:10px; padding:10px 12px; background:#fdf3f1; border:1px solid #e6b8b2; border-radius:10px; }
+.conflict-panel p { margin:6px 0; }
+.caption-row { margin-top:10px; padding:10px 12px; background:#f1f8f7; border-radius:10px; }
+.caption-row p { margin:6px 0; }
+.recalc-error { margin:6px 0; padding:6px 8px; background:#fdf3f1; border-radius:8px; color:#a83a34; }
+.ledger-row { padding:10px 0; border-bottom:1px solid #e6efee; }
+.ledger-row small { color:#638087; }
+.ledger-row div { margin-top:2px; }
 @media(max-width:900px){ .grid{grid-template-columns:1fr}.queue-row{grid-template-columns:36px 1fr}.queue-row>*:nth-child(n+3){display:none}.hero{align-items:flex-start;flex-direction:column} }
